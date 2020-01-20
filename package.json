@@ -1,8 +1,8 @@
 {
   "main": "app.js",
   "scripts": {
-    "start": "node app",
-    "start.dev": "nodemon -L",
+    "start": "node src/app",
+    "start.dev": "nodemon -L src/app.js",
     "test": "jest"
   },
   "dependencies": {

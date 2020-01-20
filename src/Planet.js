@@ -5,6 +5,10 @@ class Planet {
     this.ground = ground;
     this.filmAppearances;
   }
+
+  setFilmAppearances(number) {
+    this.filmAppearances = number;
+  }
 }
 
-export default Planet;
+module.exports = Planet;

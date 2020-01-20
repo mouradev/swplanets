@@ -4,9 +4,16 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
     volumes:
       - ./:/app
       - /app/node_modules
     ports:
       - "3000:3000"
+  mongo:
+    build:
+      context: ./db/
+    environment:
+      - "MONGO_INITDB_ROOT_USERNAME=mongo"
+      - "MONGO_INITDB_ROOT_PASSWORD=mongo"
+    volumes:
+      - ./db/.data/:/data/db
